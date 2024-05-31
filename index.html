@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau filtrable avec Bootstrap</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <input type="text" id="myInput" class="form-control mb-3" placeholder="Filtrer...">
+        <p id="resultMessage"></p>
+
+        <table id="myTable" class="table table-bordered">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Ville</th>
+                    <th scope="col">Pays</th>
+                    <th scope="col">Téléphone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>New York</td>
+                    <td>États-Unis</td>
+                    <td>+1 123 456 7890</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Los Angeles</td>
+                    <td>États-Unis</td>
+                    <td>+1 234 567 8901</td>
+                </tr>
+                <tr>
+                    <td>Michael Johnson</td>
+                    <td>Chicago</td>
+                    <td>États-Unis</td>
+                    <td>+1 345 678 9012</td>
+                </tr>
+                <!-- Ajoutez plus de lignes ici pour un tableau plus long -->
+            </tbody>
+        </table>
+
+        <button class="btn btn-primary" onclick="exportToExcel()">Télécharger Excel</button>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
